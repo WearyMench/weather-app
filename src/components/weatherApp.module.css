@@ -11,6 +11,12 @@ body {
 
 .weatherContainer {
     width: 500px;
-    height: 500px;
     margin: 20px auto;
+}
+
+@media screen and (max-width: 520px) {
+    .weatherContainer {
+        width: 80%;
+        margin: 20px auto;
+    }
 }

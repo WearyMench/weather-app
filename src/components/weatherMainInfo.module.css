@@ -30,3 +30,25 @@
     font-size: 38px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 520px) {
+    .mainInfo {
+        padding: 20px;
+    }
+
+    .row img {
+        width: 100%;
+    }
+
+    .condition {
+        font-size: 18px;
+    }
+
+    .current {
+        font-size: 24px;
+    }
+
+    .mainInfo iframe {
+        height: 50%;
+    }
+}
