@@ -1,0 +1,56 @@
+.mainInfo {
+  background-color: rgba(255, 255, 255, 0.692);
+  padding: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.city {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.country {
+  font-size: 20px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.condition {
+  font-size: 24px;
+}
+
+.current {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 520px) {
+  .mainInfo {
+    padding: 20px;
+  }
+
+  .row img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .condition {
+    font-size: 18px;
+  }
+
+  .current {
+    font-size: 24px;
+  }
+
+  .mainInfo iframe {
+    height: 50%;
+  }
+}
