@@ -6,14 +6,14 @@ import WeatherMainInfo from "./weatherMainInfo";
 import styles from "./weatherApp.module.css";
 
 export default function WeatherApp() {
-  const [weather, setWeather] = useState(null);
+  const [weather, setWeather] = useState();
 
   useEffect(() => {
     loadInfo();
   }, []);
 
   useEffect(() => {
-    document.title = "Weather | " + weather?.location?.name ?? "";
+    document.title = "Weather | " + weather?.name ?? "";
   }, [weather]);
 
   const url = import.meta.env.VITE_BACKEND_URL;
@@ -21,11 +21,11 @@ export default function WeatherApp() {
 
   async function loadInfo(city = "london") {
     try {
-      const request = await fetch(`${url}&key=${key}&q=${city}`);
+      const request = await fetch(`${url}${city}&limit=5&appid=${key}`);
       const json = await request.json();
-
+      console.log(json);
       setTimeout(() => {
-        setWeather({ ...json });
+        setWeather(json[0]);
       }, 2000);
     } catch (e) {
       console.error(e);
